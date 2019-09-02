@@ -1,0 +1,65 @@
+
+.contact{
+	
+	padding: 0 0 2%;
+	background-color: #eaebd8;
+	margin: 2%;
+
+}
+
+.input{
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid lightgray;
+	background:none;
+
+}
+
+.container-fluid{
+	opacity: 0.8;
+
+}
+.labels{
+	min-width: 70px;
+}
+.container-fluid{
+	display: flex;
+	flex-direction: row;
+}
+.submit{
+	float: right;
+	color: gray;
+}
+
+.radio {
+	font-size: 20px;
+	height: 2rem;
+	
+}
+.subscribe{
+	
+	font-size: 25px;
+	color: gray;
+}
+.socials{
+	width: 100%;
+
+}
+
+footer{
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+iframe{
+	width: 100%;
+	min-height: 60vh;
+	padding: 20px 0;
+}
+.jumbotron{
+	background-color: #e6a400;
+}
+.navbar{
+	background-color: #91b029;
+}

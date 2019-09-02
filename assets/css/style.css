@@ -1,54 +1,63 @@
-/*
-.navbar{
-	background: rgba(0, 0, 0, .5);
-	
+body{
+  background-color: #0d0d0d;
+ /* background-color: lightgray;*/
 }
-.navbar-brand{
-	height: 3rem;
-	padding-top: 0;
+
+html{
+  scroll-behavior: smooth;
 }
-img{
-	height:3rem;
-	padding-top: 0;
-	opacity: 1;
+
+.overlay{
+  overflow: hidden;
 }
-#bgvid{
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	margin-left: 0;
-	
-	
-}
-*/
-h1{
+.landingpage{
    font-family: 'Waiting for the Sunrise';
    letter-spacing: 1rem;
+   font-size: 100px;
+   
 }
+#homepage{
+  position: relative;
+  top: 0;
+  background-color: none;
+  text-align: right;
+  color: white;
+}
+
 
 h3{
   text-align: center;
-  font-family: 'Playball';
+  font-family: 'Waiting for the Sunrise';
+  font-weight: bolder;
+  letter-spacing: 5px;
 }
-header {
+.btn{
+  font-family: 'Waiting for the Sunrise';
+}
+#Home{
   position: relative;
   background-color: white;
   height: 100vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
+}
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
  
+}
+.container > h1{
+  text-align: left;
 }
 
 .logo{
   height: 40px;
   width: 40px;
 }
-.navbar{
-  background-color: rgba(0, 0, 0, .6);
-  height: 10%;
-}
-
 header video {
   position: absolute;
   bottom: 0;
@@ -68,11 +77,6 @@ header .container {
   position: relative;
   z-index: 2;
 }
-.border{
-  border: solid 1px green;
-  background-color: rgba(0, 0, 0, .3);
-  width: 50%;
-}
 
 header .overlay {
   position: absolute;
@@ -80,15 +84,564 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(5, 5, 5, .8);
+  background-color: rgba(0, 10, 10, .4);
   z-index: 1;
 }
 .btn{
   border-radius: 20px;
 }
-
-@media only screen and (max-width: 500) {
-    h1{
-      font-size: 10rem;
-    }
+.fab{
+  font-size: 50px;
+  
+  border-radius: 1px 
+  margin-bottom: 30px;
 }
+.fa-facebook{
+  color: white;
+}
+.fa-instagram{
+  color: lightgreen;
+}
+.fa-twitter{
+  color: lightblue;
+}
+.line{
+  position: relative;
+  overflow: hidden; transform: translateY(-50%);
+  white-space: nowrap;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  width: 11em;
+  margin: 0 auto;
+}
+
+.anim-typewritter{
+  animation: typewriter 4s steps(40) 0.5s 1 normal both,
+  blinkTextCursor 500ms steps(40) infinite normal;
+}
+@keyframes typewriter{
+  from{
+    width: 0;
+  }
+  to{
+    width: 14em;
+  }
+}
+@keyframes blinkTextCursor{
+  from{
+    border-right-color: rgba(255, 255, 255, 0.75)
+  }
+  to{
+    border-right-color: transparent;
+  }
+}
+
+
+
+
+
+
+
+/*===================================================================about page===============================================================================*/
+
+.nav-link{
+  color: #FFF;
+}
+.navbar{
+  background-color: #0d0d0d;
+}
+
+.navbar-toggler{
+  color: white;
+  float: left;
+  border: 1px solid white;
+}
+
+
+.w3-animate-bottom{
+  position:relative;
+  animation:animatebottom 2s;
+}
+@keyframes animatebottom{
+  from{
+    bottom:-100px;
+    opacity:.5
+    } 
+  to{
+    bottom:0;
+    opacity:1
+    }
+  }
+.adventure-hr{
+ background-color: #ff2a1c;
+width: 90%;
+text-align: right;
+
+
+}
+.aboutbg{
+  height: 100vh;
+  width: 100%;
+}
+
+#hometitle{
+  position: relative;
+  color: white;
+   z-index: 5;
+   overflow: hidden;
+
+   
+}
+.about2{
+  min-height: 82%;
+  width: 40%;
+}
+.heading{
+min-height: 50vh;
+overflow: hidden;
+}
+.aboutarticle{
+  padding: 0;
+}
+.aboutimg{
+  height: 10em;
+  width: 10em;
+  opacity: 0.3;
+  border: 1px solid #ff2a1c;
+
+}
+.aboutimg:hover{
+  position: relative;
+  opacity: 1;
+  cursor: pointer;
+  width: 15em;
+  height: 15em;
+}
+/*#aboutimg{
+  margin-top: 80px;
+}*/
+
+.w3-fade{
+  position: relative;
+  animation:animatebottom 2s;
+  
+  
+  }
+
+  @keyframes animatebottom{
+  from{
+    bottom:-100px;
+    opacity:0
+    } 
+  to{
+    bottom:0;
+    opacity:.4;
+    }
+
+  }
+
+  /*========================side images=========================*/
+
+ .gallery{
+  width:100%;
+  --border-width: 200px;
+  --border-height: 200px;
+  --width: 100%;
+  --height: 100%;
+align-items: center;
+  margin-bottom: 100px;
+  
+}
+
+.gallery:after{
+  content:'';
+}
+
+
+img{
+  width:var(--width);
+  height:var(--height);
+}
+
+.clipped-border{
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+   padding:5px;
+   background:linear-gradient(#000, #ff2a1c);
+   width:var(--border-width);
+   height:var(--border-height);
+   max-height:220px;
+   max-width:220px;
+   height: var(--height);
+   width:var(--width);
+   transition:transform 0.2s;
+   cursor:pointer;
+  
+}
+.clipped-border2{
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+   padding:5px;
+   background:linear-gradient(#000, #ff2a1c);
+   width:var(--border-width);
+   height:var(--border-height);
+   max-height:220px;
+   max-width:220px;
+   height: var(--height);
+   width:var(--width);
+   transition:transform 0.2s;
+   cursor:pointer;
+
+}
+.clipped-border3{
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+   padding:5px;
+   background:linear-gradient(#000, #ff2a1c);
+   width:var(--border-width);
+   height:var(--border-height);
+   max-height:220px;
+   max-width:220px;
+   height: var(--height);
+   width:var(--width);
+   transition:transform 0.2s;
+   cursor:pointer;
+   
+}
+.clipped-border,.clipped-border2, .clipped-border3{
+  position: relative;
+}
+
+
+.clipped-border:before{
+  content:'';
+  position:absolute;
+  opacity:0.5;
+  width:350px;
+  height:70px;
+  background:white;
+  top:0;
+  left:0;
+  z-index:1;
+  transform:rotate(45deg);
+  transition:transform 0.5s;
+}
+
+.clipped-border2:hover:before{
+  transform: translate(-100px,400%) rotate(45deg);
+  transition:transform 0.5s;
+}
+.clipped-border2:before{
+  content:'';
+  position:absolute;
+  opacity:0.5;
+  width:350px;
+  height:70px;
+  background:white;
+  top:0;
+  left:0;
+  z-index:1;
+  transform:rotate(45deg);
+  transition:transform 0.5s;
+}
+
+.clipped-border3:hover:before{
+  transform: translate(-100px,400%) rotate(45deg);
+  transition:transform 0.5s;
+}
+.clipped-border3:before{
+  content:'';
+  position:absolute;
+  opacity:0.5;
+  width:350px;
+  height:70px;
+  background:white;
+  top:0;
+  left:0;
+  z-index:1;
+  transform:rotate(45deg);
+  transition:transform 0.5s;
+}
+
+.clipped-border:hover:before{
+  transform: translate(-100px,400%) rotate(45deg);
+  transition:transform 0.5s;
+}
+#clipped{
+-webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.img:hover{
+  transform:scale(1.2);
+  transition:transform 0.2s;
+  z-index:10;
+}
+  /*============================side images======================*/
+
+
+/*.mountainparallax1{
+  background-image: url(http://4.bp.blogspot.com/-BCpjv8AzpFM/ULdk09xKBbI/AAAAAAAAJnU/tBMMgVOvwFE/s1600/rockies.jpg);  
+  min-height: 50vh;
+  min-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-position: bottom;
+
+}
+.welcome{
+  opacity: .7;
+  letter-spacing: 1rem;
+  font-size: 100px;
+
+
+}
+.mountainparallax2{
+  background-image: url(https://hazelshoots.files.wordpress.com/2017/01/2016_mt-sawi-hazel_olayres-6-of-11.jpg);
+  min-height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-width: 50%;
+
+}
+.mountainparallax3{
+  background-image: url("https://visitkinosaki.com/vkcore/wp-content/uploads/2018/08/slide-img-fall02.jpg");
+  min-height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-width: 50%;
+
+}
+.mountainparallax4{
+  background-image: url("../img/bana.jpg");
+  min-height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.mountainparallax5{
+  background-image: url("https://visitkinosaki.com/vkcore/wp-content/uploads/2018/08/slide-img-fall02.jpg");
+  min-height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-width: 50%;
+}*/
+.read > a{
+  color: #ff2a1c;
+  
+}
+div > p, .read{
+  padding: 0 20px 10px;
+  color: white;
+  text-align: left;
+}
+div > h5{
+  color: #ff2a1c;
+}
+.card-img-top{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card{
+  border: none; 
+  background-color: #0d0d0d;
+}
+.card-text{
+  height: 90px;
+  overflow: hidden;
+}
+.read{
+  margin-top: 20px;
+}
+.card-img-top:hover{
+  transform:scale(1.1);
+  transition:transform 0.2s;
+  z-index:10;
+  cursor: pointer;
+}
+
+/*div > p::first-letter{
+  font-size: 200%;
+  color: #ff2a1c;
+  padding: 5px;
+}
+*/
+.collapse{
+  text-align: center;
+}
+
+
+.welcometext{
+ 
+  top: 50%;
+}
+/*===================================================================about page==============================================================================*/
+
+
+
+
+footer{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color:  #0d0d0d;
+
+}
+nav > a{
+  color: #ffa21c;
+}
+
+/*landing page*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+
+.loading-page{
+  background: #0d0d0d;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .counter{
+    text-align: center;
+}
+    
+    #loading{
+      font-size: 40px;
+      font-weight: 100;
+      color: #ffa21c ;
+      }
+    #counterloading{
+      color: #ffa21c;
+      font-size: 60px;
+      margin-top: -10px;
+    }
+    hr{
+      background: #ffa21c;
+      border: none;
+      height: 1px;
+     } 
+  .counter{
+    position: relative;
+    width: 200px;
+}
+/*landing page*/
+
+
+@media only screen and (min-width: 300px)
+  and (max-width: 600px) {
+
+  .landingpage { 
+    font-size: 40px;
+  }
+  .welcome{
+    font-size: 50px;
+  }
+  .fab{
+  font-size: 50px;
+  border-radius: 1px 
+  margin-bottom: 30px;
+  width: 30%;
+  text-align: center;
+  padding-left: 50px;
+}
+.gallery{
+  min-height: 30vh;
+}
+.clipped-border, .clipped-border2, .clipped-border3{
+  width:130px;
+  height: 130px;
+}
+.clipped-border3{
+  margin-top: 0;
+}
+  .line{
+    font-size: 15px;
+  }
+  @keyframes typewriter{
+  from{
+    width: 0;
+  }
+  to{
+    width: 18em;
+  }
+   .gallery{
+
+  height:50%;
+  width:100%;
+  --border-width: 200px;
+  --border-height: 200px;
+  --width: 100%;
+  --height: 50%;
+align-items: center;
+  
+  
+}
+ 
+}
+
+@media only screen and (min-width: 601px)
+  and (max-width: 992px) {
+  .landingpage { 
+    font-size: 60px;
+  }
+  .welcome{
+    font-size: 70px;
+  }
+  .line{
+    font-size: 20px;
+  }
+  .clipped-border3{
+  margin-top: 0;
+  }
+  @keyframes typewriter{
+  from{
+    width: 0;
+  }
+  to{
+    width: 18em;
+  }
+  
+    .gallery{
+      min-height: 30vh;
+  height:50%;
+  width:100%;
+  --border-width: 200px;
+  --border-height: 200px;
+  --width: 100%;
+  --height: 50%;
+align-items: center;
+  }
+}
+
