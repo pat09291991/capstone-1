@@ -7,6 +7,7 @@ html{
   scroll-behavior: smooth;
 }
 
+/*================================landing page================================================*/
 .overlay{
   overflow: hidden;
 }
@@ -14,6 +15,7 @@ html{
    font-family: 'Waiting for the Sunrise';
    letter-spacing: 1rem;
    font-size: 100px;
+   color:#ffa21c;
    
 }
 #homepage{
@@ -42,7 +44,7 @@ h3{
   width: 100%;
   overflow: hidden;
 }
-.container{
+#footstep{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -50,14 +52,13 @@ h3{
   text-align: center;
  
 }
-.container > h1{
+#footstep > h1{
   text-align: left;
 }
-
-.logo{
+/*.logo{
   height: 40px;
   width: 40px;
-}
+}*/
 header video {
   position: absolute;
   bottom: 0;
@@ -71,6 +72,7 @@ header video {
   -moz-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  object-fit: cover;
 }
 
 header .container {
@@ -87,24 +89,34 @@ header .overlay {
   background-color: rgba(0, 10, 10, .4);
   z-index: 1;
 }
+/*================================landing page================================================*/
 .btn{
   border-radius: 20px;
+  color: #ffa21c;
+  border: 1px solid #ffa21c;
 }
-.fab{
+.btn:hover{
+  color: white;
+  transform:scale(1.2);
+  transition:transform 0.2s;
+  border-color: white;
+
+}
+
+/*.fab{
   font-size: 50px;
-  
   border-radius: 1px 
   margin-bottom: 30px;
 }
 .fa-facebook{
-  color: white;
+  color: #4267b2;
 }
 .fa-instagram{
-  color: lightgreen;
+  color: lightgray;
 }
 .fa-twitter{
-  color: lightblue;
-}
+  color: #FFF;
+}*/
 .line{
   position: relative;
   overflow: hidden; transform: translateY(-50%);
@@ -112,6 +124,7 @@ header .overlay {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   width: 11em;
   margin: 0 auto;
+  color: #ffa21c;
 }
 
 .anim-typewritter{
@@ -156,6 +169,12 @@ header .overlay {
   border: 1px solid white;
 }
 
+.sticky{
+  position: sticky;
+  top: 0;
+  background-color: #0d0d0d;
+  z-index: 9999;
+}
 
 .w3-animate-bottom{
   position:relative;
@@ -164,16 +183,16 @@ header .overlay {
 @keyframes animatebottom{
   from{
     bottom:-100px;
-    opacity:.5
+    opacity:.5;
     } 
   to{
     bottom:0;
-    opacity:1
+    opacity:1;
     }
   }
 .adventure-hr{
- background-color: #ff2a1c;
-width: 90%;
+ background-color: #ffa21c;
+width: 100%;
 text-align: right;
 
 
@@ -196,7 +215,7 @@ text-align: right;
   width: 40%;
 }
 .heading{
-min-height: 50vh;
+min-height: 95vh;
 overflow: hidden;
 }
 .aboutarticle{
@@ -206,7 +225,7 @@ overflow: hidden;
   height: 10em;
   width: 10em;
   opacity: 0.3;
-  border: 1px solid #ff2a1c;
+  border: 1px solid #ffa21c;
 
 }
 .aboutimg:hover{
@@ -239,6 +258,25 @@ overflow: hidden;
 
   }
 
+/*=======================================content=============================*/
+.nav{
+  border: 1px solid #ffa21c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*=======================================content=============================*/
+
+
   /*========================side images=========================*/
 
  .gallery{
@@ -266,7 +304,7 @@ img{
   -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
    padding:5px;
-   background:linear-gradient(#000, #ff2a1c);
+   background:linear-gradient(#000, #ffa21c);
    width:var(--border-width);
    height:var(--border-height);
    max-height:220px;
@@ -281,7 +319,7 @@ img{
   -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
    padding:5px;
-   background:linear-gradient(#000, #ff2a1c);
+   background:linear-gradient(#000, #ffa21c);
    width:var(--border-width);
    height:var(--border-height);
    max-height:220px;
@@ -296,7 +334,7 @@ img{
   -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
    padding:5px;
-   background:linear-gradient(#000, #ff2a1c);
+   background:linear-gradient(#000, #ffa21c);
    width:var(--border-width);
    height:var(--border-height);
    max-height:220px;
@@ -377,7 +415,28 @@ clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   z-index:10;
 }
   /*============================side images======================*/
+.mountainparallax1{
+  background-image: url(../img/square/pineapple1.jpg);
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 0;
+}
 
+.welcometext{
+  z-index: 1;
+}
+.nav{
+  position: sticky;
+  top: 58px;
+}
 
 /*.mountainparallax1{
   background-image: url(http://4.bp.blogspot.com/-BCpjv8AzpFM/ULdk09xKBbI/AAAAAAAAJnU/tBMMgVOvwFE/s1600/rockies.jpg);  
@@ -457,16 +516,12 @@ clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   min-width: 50%;
 }*/
 .read > a{
-  color: #ff2a1c;
+  color: #ffa21c;
   
 }
-div > p, .read{
-  padding: 0 20px 10px;
-  color: white;
-  text-align: left;
-}
+
 div > h5{
-  color: #ff2a1c;
+  color: #ffa21c;
 }
 .card-img-top{
   width: 100%;
@@ -493,7 +548,7 @@ div > h5{
 
 /*div > p::first-letter{
   font-size: 200%;
-  color: #ff2a1c;
+  color: #ffa21c;
   padding: 5px;
 }
 */
@@ -564,18 +619,19 @@ nav > a{
 
   .landingpage { 
     font-size: 40px;
+    color: #ffa21c;
   }
   .welcome{
     font-size: 50px;
   }
-  .fab{
+ /* .fab{
   font-size: 50px;
   border-radius: 1px 
   margin-bottom: 30px;
   width: 30%;
   text-align: center;
   padding-left: 50px;
-}
+}*/
 .gallery{
   min-height: 30vh;
 }
@@ -610,6 +666,20 @@ align-items: center;
 }
  
 }
+
+
+
+/*===================================================contact page===================================*/
+
+
+
+
+
+
+
+
+
+/*===================================================contact page===================================*/
 
 @media only screen and (min-width: 601px)
   and (max-width: 992px) {
