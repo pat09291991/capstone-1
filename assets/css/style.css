@@ -89,6 +89,20 @@ header .overlay {
   background-color: rgba(0, 10, 10, .4);
   z-index: 1;
 }
+
+.backtop{
+  border: 1px solid #ffa21c;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 99999;
+  width: 60px;
+  background-color: #ffa21c;
+  font-size: 15px;
+  font-family: 'Waiting for the Sunrise';
+  color: #0d0d0d;
+  font-weight: bold;
+}
 /*================================landing page================================================*/
 .btn{
   border-radius: 20px;
@@ -96,10 +110,11 @@ header .overlay {
   border: 1px solid #ffa21c;
 }
 .btn:hover{
-  color: white;
+  border: 1px solid #ffa21c;
   transform:scale(1.2);
   transition:transform 0.2s;
-  border-color: white;
+  color: #ffa21c;
+ 
 
 }
 
@@ -157,7 +172,9 @@ header .overlay {
 /*===================================================================about page===============================================================================*/
 
 .nav-link{
-  color: #FFF;
+  color: #ffa21c !important;
+  margin-right: 30px;
+
 }
 .navbar{
   background-color: #0d0d0d;
@@ -215,7 +232,7 @@ text-align: right;
   width: 40%;
 }
 .heading{
-min-height: 95vh;
+min-height: 50vh;
 overflow: hidden;
 }
 .aboutarticle{
@@ -262,8 +279,41 @@ overflow: hidden;
 .nav{
   border: 1px solid #ffa21c;
 }
+.nav{
+  position: sticky;
+  top: 58px;
+}
 
+.mountcontent{
+  line-height: 15px;
+  margin: 10px;
+  color: white;
+  font-size: 15px;
 
+}
+
+.titleimage{
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  
+ 
+}
+.welcometext{
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+
+}
+.img{
+  height: 335px;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+.img:hover{
+  filter: grayscale(0)
+}
 
 
 
@@ -409,51 +459,26 @@ img{
 clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 }
 
-.img:hover{
+.img2:hover{
   transform:scale(1.2);
   transition:transform 0.2s;
   z-index:10;
 }
   /*============================side images======================*/
+
+
 .mountainparallax1{
-  background-image: url(../img/square/pineapple1.jpg);
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-position: center;
-  opacity: 0.3;
-  z-index: 0;
-}
-
-.welcometext{
-  z-index: 1;
-}
-.nav{
-  position: sticky;
-  top: 58px;
-}
-
-/*.mountainparallax1{
-  background-image: url(http://4.bp.blogspot.com/-BCpjv8AzpFM/ULdk09xKBbI/AAAAAAAAJnU/tBMMgVOvwFE/s1600/rockies.jpg);  
-  min-height: 50vh;
+  background-image: url('../img/square/makiling.jpg');  
+  min-height: 60vh;
   min-width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
   background-position: bottom;
 
 }
-.welcome{
+/*.welcome{
   opacity: .7;
   letter-spacing: 1rem;
   font-size: 100px;
@@ -517,11 +542,21 @@ clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 }*/
 .read > a{
   color: #ffa21c;
-  
+  text-decoration: none;
 }
 
-div > h5{
+.card-title{
   color: #ffa21c;
+}
+
+.card-title:hover{
+  color: #ffa21c;
+  
+  
+
+}
+.card-body > a{
+  text-decoration: none;
 }
 .card-img-top{
   width: 100%;
@@ -615,7 +650,7 @@ nav > a{
 
 
 @media only screen and (min-width: 300px)
-  and (max-width: 600px) {
+  and (max-width: 768px) {
 
   .landingpage { 
     font-size: 40px;
@@ -624,14 +659,6 @@ nav > a{
   .welcome{
     font-size: 50px;
   }
- /* .fab{
-  font-size: 50px;
-  border-radius: 1px 
-  margin-bottom: 30px;
-  width: 30%;
-  text-align: center;
-  padding-left: 50px;
-}*/
 .gallery{
   min-height: 30vh;
 }
@@ -643,7 +670,7 @@ nav > a{
   margin-top: 0;
 }
   .line{
-    font-size: 15px;
+    font-size: 13px;
   }
   @keyframes typewriter{
   from{
@@ -662,27 +689,16 @@ nav > a{
   --height: 50%;
 align-items: center;
   
-  
-}
+  }
+  .main{
+    height: 100vh;
+  }
+
+
  
 }
 
-
-
-/*===================================================contact page===================================*/
-
-
-
-
-
-
-
-
-
-/*===================================================contact page===================================*/
-
-@media only screen and (min-width: 601px)
-  and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .landingpage { 
     font-size: 60px;
   }
@@ -690,7 +706,7 @@ align-items: center;
     font-size: 70px;
   }
   .line{
-    font-size: 20px;
+    font-size: 13px;
   }
   .clipped-border3{
   margin-top: 0;
@@ -700,7 +716,7 @@ align-items: center;
     width: 0;
   }
   to{
-    width: 18em;
+    width: 19em;
   }
   
     .gallery{
@@ -713,5 +729,39 @@ align-items: center;
   --height: 50%;
 align-items: center;
   }
-}
 
+  .clipped-border, .clipped-border2, .clipped-border3{
+  width:130px;
+  height: 130px;
+}
+.clipped-border3{
+  margin-top: 0;
+}
+.heading{
+    min-height: 95vh;
+  }
+}
+.mountcontent{
+  line-height: 13px;
+  margin: 10px;
+  color: white;
+  font-size: 13px;
+
+}
+.backtop{
+  border: 1px solid #ffa21c;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 99999;
+  width: 40px;
+  height:30px;
+  background-color: #ffa21c;
+  font-size: 10px;
+  font-family: 'Waiting for the Sunrise';
+  color: #0d0d0d;
+  font-weight: bold;
+}
+.navbar-brand{
+  font-size: 15px;
+}

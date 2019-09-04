@@ -7,10 +7,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
 <script src="https://kit.fontawesome.com/f486ab3997.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
 
 <link rel="stylesheet" type="text/css" href="./assets/css/animation.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 <link href='https://fonts.googleapis.com/css?family=Mrs Sheppards' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Waiting for the Sunrise' rel='stylesheet'>
@@ -18,138 +21,75 @@
 <body>
 
 	
-	    <div class="wrapper">
-    
-    <div class="block animatable bounceIn">bounceIn</div>
-    <div class="block animatable bounceInLeft">bounceInLeft</div>
-    <div class="block animatable bounceInRight">bounceInRight</div>
-    
-    <div class="block animatable fadeIn">fadeIn</div>
-    <div class="block animatable fadeInDown">fadeInDown</div>
-    <div class="block animatable fadeInUp">fadeInUp</div>
-    
-    <div class="block animatable moveUp">moveUp</div>
-    
-    <div class="block animatable fadeBgColor">fadeBgColor</div>
-    
-    
-    
-    
-    <div class="block animatable bounceIn">bounceIn</div>
-    <div class="block animatable bounceInLeft">bounceInLeft</div>
-    <div class="block animatable bounceInRight">bounceInRight</div>
-    
-    <div class="block animatable fadeIn">fadeIn</div>
-    <div class="block animatable fadeInDown">fadeInDown</div>
-    <div class="block animatable fadeInUp">fadeInUp</div>
-    
-    <div class="block animatable moveUp">moveUp</div>
-    
-    <div class="block animatable fadeBgColor">fadeBgColor</div>
-    
-    
-    
-    
-    <div class="block animatable bounceIn">bounceIn</div>
-    <div class="block animatable bounceInLeft">bounceInLeft</div>
-    <div class="block animatable bounceInRight">bounceInRight</div>
-    
-    <div class="block animatable fadeIn">fadeIn</div>
-    <div class="block animatable fadeInDown">fadeInDown</div>
-    <div class="block animatable fadeInUp">fadeInUp</div>
-    
-    <div class="block animatable moveUp">moveUp</div>
-    
-    <div class="block animatable fadeBgColor">fadeBgColor</div>
-    
-    
-    
-    
-    <div class="block animatable bounceIn">bounceIn</div>
-    <div class="block animatable bounceInLeft">bounceInLeft</div>
-    <div class="block animatable bounceInRight">bounceInRight</div>
-    
-    <div class="block animatable fadeIn">fadeIn</div>
-    <div class="block animatable fadeInDown">fadeInDown</div>
-    <div class="block animatable fadeInUp">fadeInUp</div>
-    
-    <div class="block animatable moveUp">moveUp</div>
-    
-    <div class="block animatable fadeBgColor">fadeBgColor</div>
-    
-    
-    
-    
-    <div class="block animatable bounceIn">bounceIn</div>
-    <div class="block animatable bounceInLeft">bounceInLeft</div>
-    <div class="block animatable bounceInRight">bounceInRight</div>
-    
-    <div class="block animatable fadeIn">fadeIn</div>
-    <div class="block animatable fadeInDown">fadeInDown</div>
-    <div class="block animatable fadeInUp">fadeInUp</div>
-    
-    <div class="block animatable moveUp">moveUp</div>
-    
-    <div class="block animatable fadeBgColor">fadeBgColor</div>
-    
-    
-    
-    
-    <div class="block animatable bounceIn">bounceIn</div>
-    <div class="block animatable bounceInLeft">bounceInLeft</div>
-    <div class="block animatable bounceInRight">bounceInRight</div>
-    
-    <div class="block animatable fadeIn">fadeIn</div>
-    <div class="block animatable fadeInDown">fadeInDown</div>
-    <div class="block animatable fadeInUp">fadeInUp</div>
-    
-    <div class="block animatable moveUp">moveUp</div>
-    
-    <div class="block animatable fadeBgColor">fadeBgColor</div>
-    
-  </div>
+    <div class="main">
+      <div class="top half">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/avengers2.jpg" />
+    </div>
+    <div class="bottom half">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/avengers2.jpg" />
+    </div>
+    <button class="super-button" onclick="myFunction()">Enter</button>
+    <div class="overlay"></div>
+    <div class="button-line left">
+        <div class="inner"></div>
+    </div>
+    <div class="button-line right">
+        <div class="inner"></div>
+    </div>
+</div>
+<div class="d-lg-flex flex-column justify-content-center h-100 welcometext">
+            <div class="loading-page">
+        <div class="counter">
+            <h1 class="d-lg-1 text-light">WELCOME</h1>
+            <h1 id="counterloading">0%
+            <!--h1.abs loading
+                h1.abs.color loading-->
+            </h1>
+            <hr/>
+        </div>
+    </div>
+</div>
+
 
 <script>
-	// Trigger CSS animations on scroll.
-// Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+$(document).ready(function() {
+  $(document).on("click", ".super-button", function() {
+    $(".main, .half, .overlay, .button-line, .super-button, .welcometext").addClass("active");
+    setTimeout(function() {
+      $(".main *").css("z-index", "1");}, 3000);
+  });
+});</script>
 
-// Looking for a version that also reverses the animation when
-// elements scroll below the fold again?
-// --> Check https://codepen.io/bramus/pen/vKpjNP
 
-jQuery(function($) {
+
+ <script>
+    $(document).ready(function() {
   
-  // Function which adds the 'animated' class to any '.animatable' in view
-  var doAnimations = function() {
-    
-    // Calc current offset and get all animatables
-    var offset = $(window).scrollTop() + $(window).height(),
-        $animatables = $('.animatable');
-    
-    // Unbind scroll handler if we have no animatables
-    if ($animatables.length == 0) {
-      $(window).off('scroll', doAnimations);
+  var counter = 0;
+  var c = 0;
+  var i = setInterval(function(){
+      $(".loading-page .counter #counterloading").html(c + "%");
+      $(".loading-page .counter hr").css("width", c + "%");
+      //$(".loading-page .counter").css("background", "linear-gradient(to right, #f60d54 "+ c + "%,#0d0d0d "+ c + "%)");
+
+    /*
+    $(".loading-page .counter h1.color").css("width", c + "%");
+    */
+    counter++;
+    c++;
+      
+    if(counter == 101) {
+        window.location.href = 'about.html';
+         
     }
-    
-    // Check all animatables and animate them if necessary
-		$animatables.each(function(i) {
-       var $animatable = $(this);
-			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
-        $animatable.removeClass('animatable').addClass('animated');
-			}
-    });
-
-	};
-  
-  // Hook doAnimations on scroll, and trigger a scroll
-	$(window).on('scroll', doAnimations);
-  $(window).trigger('scroll');
-
+  }, 50);
 });
 </script>
+
 <script src="./assets/js/jquery-3.3.1.min.js"></script>
 <script src="./assets/js/popper.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

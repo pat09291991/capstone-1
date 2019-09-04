@@ -3,6 +3,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body{
   background-color: #0d0d0d;
@@ -72,16 +75,19 @@ iframe:hover{
 
 }
 
+a.nav-link{
+  color: #ffa21c !important;
+  margin-right: 30px;
+
+}
 .navbar{
   background-color: #0d0d0d;
 }
-.socialcontacts{
-	font-size: 20px;
-}
-.nav-link{
+
+.navbar-toggler{
   color: white;
   float: left;
-  
+  border: 1px solid white;
 }
 .map{
 	margin: 10% 0 0;
@@ -153,11 +159,11 @@ input[type=radio]:checked ~ .check::before{
   color: white;
 }
 /*==================================gallery css==================*/
-@import url(https://fonts.googleapis.com/css?family=Arapey:400italic);
+/*@import url(https://fonts.googleapis.com/css?family=Arapey:400italic);
 body {
   background: #0d0d0d;
   -webkit-font-smoothing: antialiased;
-}
+}*/
  /*.mtmaculot{
  	 background-image: url(../img/bana.jpg);
  }*/
@@ -170,7 +176,19 @@ body {
 .img:hover{
 	filter: grayscale(0)
 }
-
+.backtop{
+  border: 1px solid #ffa21c;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 99999;
+  width: 60px;
+  background-color: #ffa21c;
+  font-size: 15px;
+  font-family: 'Waiting for the Sunrise';
+  color: #0d0d0d;
+  font-weight: bold;
+}
 
 /*============================================================================*/
 @media only screen and (max-width: 600px){
