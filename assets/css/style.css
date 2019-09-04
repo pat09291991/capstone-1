@@ -3,6 +3,7 @@ body{
 
 }
 
+
 html{
   scroll-behavior: smooth;
 }
@@ -151,7 +152,7 @@ header .overlay {
   right: 10px;
   bottom: 10px;
   z-index: 99999;
-  width: 60px;
+  width: 30px;
   background-color: #ffa21c;
   font-size: 15px;
   font-family: 'Waiting for the Sunrise';
@@ -163,12 +164,16 @@ header .overlay {
   border-radius: 20px;
   color: #ffa21c;
   border: 1px solid #ffa21c;
+  font-size: 15px;
+  font-weight: bold;
 }
 .btn:hover{
-  border: 1px solid #ffa21c;
+  border: 1px solid white;
   transform:scale(1.2);
   transition:transform 0.2s;
   color: #ffa21c;
+  background-color: white;
+  font-weight: bolder;
 }
 
 .line{
@@ -215,8 +220,16 @@ header .overlay {
   margin-right: 30px;
 
 }
+.nav-link:hover{
+  color: white !important;
+}
 .navbar{
   background-color: #0d0d0d;
+}
+
+.navbar-brand:hover{
+  background-color: #0d0d0d;
+  color: white;
 }
 
 .navbar-toggler{

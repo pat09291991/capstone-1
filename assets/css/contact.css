@@ -113,8 +113,8 @@ input[type=radio]:checked ~ .check::before{
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 2px dashed #ffa21c;
   background-clip: content-box;
@@ -123,7 +123,7 @@ input[type=radio]:checked ~ .check::before{
   color: #D7D0BE;
   margin-left: 15px;
   margin-right: 15px;
-  font-size: 70px;
+  font-size: 40px;
 }
 
 .social .link span {
@@ -172,7 +172,7 @@ input[type=radio]:checked ~ .check::before{
   right: 10px;
   bottom: 10px;
   z-index: 99999;
-  width: 60px;
+  width: 30px;
   background-color: #ffa21c;
   font-size: 15px;
   font-family: 'Waiting for the Sunrise';
