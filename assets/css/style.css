@@ -285,7 +285,7 @@ header .overlay {
 
 .navbar-toggler{
   color: white;
-  float: left;
+
   border: 1px solid white;
 }
 
@@ -347,7 +347,7 @@ min-height: 50vh;
 overflow: hidden;
 }
 .aboutarticle{
-  padding: 5px;
+  padding: 0px;
   line-height: 1.5rem;
 }
 .aboutimg{
