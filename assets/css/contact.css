@@ -9,6 +9,7 @@ html{
 
 body{
   background-color: #0d0d0d;
+  font-family: sans-serif;
 }
 
 .contact{
@@ -57,6 +58,7 @@ footer{
 	width: 100%;
 }
 
+
 iframe{
 	width: 100%;
 	
@@ -73,12 +75,18 @@ iframe:hover{
 
 }
 
-a.nav-link{
+.nav-link{
   color: #ffa21c !important;
   margin-right: 30px;
 
 }
+.nav-link:hover{
+  color: white !important;
+}
 .navbar{
+  background-color: #0d0d0d;
+}
+.dropdown-menu{
   background-color: #0d0d0d;
 }
 
@@ -90,9 +98,7 @@ a.nav-link{
 .map{
 	margin: 10% 0 0;
 }
-nav > a{
-	color: #ffa21c;
-}
+
 #email{
 	color: #ffa21c;
 }
@@ -191,9 +197,113 @@ input[type=radio]:checked ~ .check::before{
   color: #ffa21c;
 }
 
+.w3-animate-opacity{animation:opac 2s}
+@keyframes opac{
+  from{
+    opacity:0
+  } 
+  to{
+    opacity:1
+    }
+  }
+  .head, .foot{
+  color: #ffa21c !important;
+  font-weight: bold;
+  font-family: 'Waiting for the Sunrise';
+  font-size: 20px;
+}
+
+.head, .foot:hover{
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.dropdown-item{
+  color: #ffa21c !important;
+  font-weight: bold;
+  font-family: 'Waiting for the Sunrise';
+  font-size: 20px;
+  }
+  .dropdown-item:hover{
+  color: #ffa21c !important;
+  font-weight: bolder;
+  font-family: 'Waiting for the Sunrise';
+  font-size: 20px;
+  transform:scale(1.1);
+  transition:transform 0.2s;
+}
+.head, .foot:hover{
+  background-color: #0d0d0d;
+  color: white;
+}
 /*============================================================================*/
-@media only screen and (max-width: 600px){
-	.social .link {
+
+@media only screen and (min-width: 300px)
+  and (max-width: 767px) {
+
+.head, .foot{
+  font-size: 18px;
+}
+  .landingpage, .landingpage3 { 
+    font-size: 45px;
+    color: #ffa21c;
+  }
+  .landingpage2{
+    font-size: 30px;
+    margin-top: 20px;
+
+  }
+  .welcome{
+    font-size: 50px;
+  }
+.gallery{
+  min-height: 30vh;
+}
+.clipped-border, .clipped-border2, .clipped-border3{
+  width:130px;
+  /*height: 130px;*/
+}
+.clipped-border3{
+  margin-top: 0;
+}
+  .line{
+    font-size: 16px;
+  }
+  @keyframes typewriter{
+  from{
+    width: 0;
+  }
+  to{
+    width: 18em;
+  }
+}
+  @keyframes typewriter2{
+  from{
+    width: 0;
+  }
+  to{
+    width: 8em;
+  }
+}
+   .gallery{
+
+  height:50%;
+  width:100%;
+  --border-width: 200px;
+  --border-height: 200px;
+  --width: 100%;
+  --height: 50%;
+align-items: center;
+  
+  }
+  .main{
+    height: 100vh;
+  }
+.btn{
+  font-size: 20px;
+}
+
+  .social .link {
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -209,4 +319,68 @@ input[type=radio]:checked ~ .check::before{
   margin-right: 0px;
   font-size: 30px;
 }
+
+ 
+}
+
+@media only screen and (min-width: 768px)
+and (max-width: 1200px) {
+
+  .head, .foot{
+  font-size: 25px;
+}
+  .landingpage, { 
+    font-size: 60px;
+  }
+  .landingpage2{
+    font-size: 100px;
+    padding: 20px;
+
+  }
+
+  .welcome{
+    font-size: 70px;
+  }
+ 
+  .clipped-border3{
+  margin-top: 0;
+  }
+.btn{
+  font-size: 30px;
+}
+  
+   
+  .clipped-border, .clipped-border2, .clipped-border3{
+  width:200px;
+  height: 200px;
+}
+.clipped-border3{
+  margin-top: 0;
+}
+.heading{
+    min-height: 50vh;
+  }
+}
+.mountcontent{
+  line-height: 13px;
+  margin: 10px;
+  color: white;
+  font-size: 15px;
+
+}
+.backtop{
+  border: 1px solid #ffa21c;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 99999;
+  width: 40px;
+  height:30px;
+  background-color: #ffa21c;
+  font-size: 10px;
+  font-family: 'Waiting for the Sunrise';
+  color: #0d0d0d;
+  font-weight: bold;
+}
+
 }

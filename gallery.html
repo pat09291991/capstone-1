@@ -19,32 +19,46 @@
  
 </head>
 <body>
-<div id="heading" class="px-0 ml-auto">
-    <nav class="navbar navbar-dark navbar-expand-lg">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+<div id="heading" class="px-0 ml-auto  sticky">
+    <nav class="navbar navbar-dark head navbar-expand-lg container">
+       <a class="navbar-brand head" href="about.html">Footsteps</a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="about.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html#about">About</a>           
+            <a class="nav-link" href="#about">About</a>           
+          </li>
+          <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mountains
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="content.html">Mt. Makiling</a>
+          <a class="dropdown-item" href="contentbanahaw.html">Mt. Banahaw</a>
+          <a class="dropdown-item" href="contentpineapple.html">Pineapple Mountain</a>
+        </div>
+      </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>           
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>            
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html#contact">Contact</a>         
+            <a class="nav-link" href="about.html#contact">Contact</a>           
           </li>
         </ul>
         </div>
     </nav>
   </div>
 
-<div class="container-fluid px-0 mx-0 row">
+
+
+<div class="container-fluid px-0 mx-0 row w3-animate-opacity">
   <div class='d-block col-lg-3 col-md-6 px-0'>
         <a href="./assets/img/square/bana9.jpg" data-lightbox="mygallery" data-title="Mt. Banahaw April 2018"><img src="./assets/img/square/bana9.jpg" class="img"></a>
   </div>
@@ -136,9 +150,9 @@
 <div>
     <a href="#heading" class="backtop"><button class="backtop">Top</button></a>
   </div>
-  <footer class="mt-5">
+ <footer>
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand mx-auto" href="#">Zuitt Coding Bootcamp &copy; 2019</a>
+      <a class="navbar-brand mx-auto foot" href="about.html">Patrick F. Llegos &copy; 2019 | Footsteps<i class="fab fa-facebook-square ml-2"></i><i class="fab fa-instagram ml-2"></i><i class="fab fa-google-plus-square ml-2"></i></a>
     </footer>
 
 
