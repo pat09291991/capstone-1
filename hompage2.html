@@ -12,80 +12,13 @@
 
 <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="./assets/css/animation.css">
-<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/homepage.css">
 <link href='https://fonts.googleapis.com/css?family=Mrs Sheppards' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Waiting for the Sunrise' rel='stylesheet'>
 </head>
 <body>
-
-	
-    <div class="main">
-      <div class="top half">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/avengers2.jpg" />
-    </div>
-    <div class="bottom half">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/avengers2.jpg" />
-    </div>
-    <button class="super-button" onclick="myFunction()">Enter</button>
-    <div class="overlay"></div>
-    <div class="button-line left">
-        <div class="inner"></div>
-    </div>
-    <div class="button-line right">
-        <div class="inner"></div>
-    </div>
-</div>
-<div class="d-lg-flex flex-column justify-content-center h-100 welcometext">
-            <div class="loading-page">
-        <div class="counter">
-            <h1 class="d-lg-1 text-light">WELCOME</h1>
-            <h1 id="counterloading">0%
-            <!--h1.abs loading
-                h1.abs.color loading-->
-            </h1>
-            <hr/>
-        </div>
-    </div>
-</div>
-
-
-<script>
-$(document).ready(function() {
-  $(document).on("click", ".super-button", function() {
-    $(".main, .half, .overlay, .button-line, .super-button, .welcometext").addClass("active");
-    setTimeout(function() {
-      $(".main *").css("z-index", "1");}, 3000);
-  });
-});</script>
-
-
-
- <script>
-    $(document).ready(function() {
   
-  var counter = 0;
-  var c = 0;
-  var i = setInterval(function(){
-      $(".loading-page .counter #counterloading").html(c + "%");
-      $(".loading-page .counter hr").css("width", c + "%");
-      //$(".loading-page .counter").css("background", "linear-gradient(to right, #f60d54 "+ c + "%,#0d0d0d "+ c + "%)");
-
-    /*
-    $(".loading-page .counter h1.color").css("width", c + "%");
-    */
-    counter++;
-    c++;
-      
-    if(counter == 101) {
-        window.location.href = 'about.html';
-         
-    }
-  }, 50);
-});
-</script>
-
 <script src="./assets/js/jquery-3.3.1.min.js"></script>
 <script src="./assets/js/popper.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
